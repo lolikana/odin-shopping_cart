@@ -13,13 +13,8 @@
   width: 140px;
 }
 
+.buttons,
 .icons {
   @extend %display-flex;
   gap: 0.5rem;
-}
-
-.icons__item {
-  img {
-    height: 32px;
-  }
 }
