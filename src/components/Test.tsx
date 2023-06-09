@@ -1,4 +1,4 @@
-import React from 'react';
+import './Test.module.scss';
 
 const Test = () => {
   return <div>Test</div>;
