@@ -1,0 +1,25 @@
+@import '@/styles/main';
+
+.header {
+  height: 48px;
+  padding: 0 1rem;
+
+  @extend %display-flex;
+  @extend %align-items-center;
+  @extend %justify-content-between;
+}
+
+.logo {
+  width: 140px;
+}
+
+.icons {
+  @extend %display-flex;
+  gap: 0.5rem;
+}
+
+.icons__item {
+  img {
+    height: 32px;
+  }
+}
