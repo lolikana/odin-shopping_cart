@@ -9,6 +9,9 @@ import styles from './Header.module.scss';
 const Header = () => {
   return (
     <header data-testid="header-component" className={styles.header}>
+      <nav className={styles.navbar}>
+        <Navbar />
+      </nav>
       <div className={styles.logo}>
         <img src={SalomonLogo} alt="Salomon logo" />
       </div>
@@ -29,7 +32,6 @@ const Header = () => {
             />
           </li>
         </ul>
-        <Navbar />
       </div>
     </header>
   );
