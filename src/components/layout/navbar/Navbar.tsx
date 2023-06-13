@@ -1,6 +1,5 @@
+import { Burger } from '@components/ui';
 import { useState } from 'react';
-
-import { Burger } from '@/components/ui';
 
 import NavMenu from './NavMenu';
 

@@ -21,6 +21,18 @@ export default defineConfig({
         replacement: path.resolve(__dirname, './src')
       },
       {
+        find: '@components',
+        replacement: path.resolve(__dirname, './src/components')
+      },
+      {
+        find: '@pages',
+        replacement: path.resolve(__dirname, './src/pages')
+      },
+      {
+        find: '@styles',
+        replacement: path.resolve(__dirname, './src/styles')
+      },
+      {
         find: '@__tests__',
         replacement: path.resolve(__dirname, './__tests__')
       }
