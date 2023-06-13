@@ -1,19 +1,23 @@
+import renderWithRouter from '@__tests__/renderWithRouter';
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 
 import Navbar from './Navbar';
 
 describe('Navbar.tsx', () => {
   it('should renders the burger icon', () => {
-    render(<Navbar />);
+    render(
+      <MemoryRouter>
+        <Navbar />
+      </MemoryRouter>
+    );
     const burger = screen.getByTestId('burger');
     expect(burger).toBeInTheDocument();
   });
 
   it('should renders the nav menu and set aria-hidden to false when click burger', async () => {
-    const user = userEvent.setup();
-    render(<Navbar />);
+    const { user } = renderWithRouter(<Navbar />, { route: '/' });
 
     const menu: HTMLUListElement = screen.getByTestId('navmenu');
     const burger = screen.getByTestId('burger');

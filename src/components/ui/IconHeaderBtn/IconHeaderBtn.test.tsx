@@ -1,5 +1,6 @@
+import renderWithRouter from '@__tests__/renderWithRouter';
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 
 import IconHeaderBtn from './IconHeaderBtn';
@@ -12,20 +13,28 @@ describe('IconHeaderBtn.tsx', () => {
   };
 
   it('renders the component without errors', () => {
-    render(<IconHeaderBtn {...mockProps} />);
+    render(
+      <MemoryRouter>
+        <IconHeaderBtn {...mockProps} />
+      </MemoryRouter>
+    );
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
   it('should pass the correct props', () => {
-    render(<IconHeaderBtn {...mockProps} />);
+    render(
+      <MemoryRouter>
+        <IconHeaderBtn {...mockProps} />
+      </MemoryRouter>
+    );
     const image: HTMLImageElement = screen.getByRole('img');
     expect(image).toHaveAttribute('src', '/path/to/image.png');
     expect(image).toHaveAttribute('alt', `Image icon`);
   });
 
   it('responds to user interactions', async () => {
-    const user = userEvent.setup();
-    render(<IconHeaderBtn {...mockProps} />);
+    const { user } = renderWithRouter(<IconHeaderBtn {...mockProps} />);
+
     const buttonElement = screen.getByRole('button');
     await user.click(buttonElement);
     expect(mockProps.onClick).toHaveBeenCalledTimes(1);

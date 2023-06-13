@@ -19,6 +19,10 @@ export default defineConfig({
       {
         find: '@',
         replacement: path.resolve(__dirname, './src')
+      },
+      {
+        find: '@__tests__',
+        replacement: path.resolve(__dirname, './__tests__')
       }
     ]
   },
@@ -26,7 +30,7 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './__tests__/setup.ts',
-    exclude: ['node_modules', './__tests__/setup.ts']
+    exclude: ['node_modules', './__tests__/setup.ts', './__tests__/renderWithRouter.ts']
   },
   server: {
     port: 3000
