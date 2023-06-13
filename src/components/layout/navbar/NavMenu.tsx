@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './NavMenu.module.scss';
 
@@ -11,8 +12,12 @@ const NavMenu: FC<Props> = props => {
 
   return (
     <ul data-testid="navmenu" aria-hidden={isHidden} className={styles.menu}>
-      <li className={styles.menu__item}>Home</li>
-      <li className={styles.menu__item}>Shop</li>
+      <li className={styles.menu__item}>
+        <Link to="/">Home</Link>
+      </li>
+      <li className={styles.menu__item}>
+        <Link to="/shop">Shop</Link>
+      </li>
     </ul>
   );
 };
