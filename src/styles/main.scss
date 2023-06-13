@@ -6,3 +6,9 @@
 // utils //
 @import './utils/variables';
 @import './utils/mixins';
+
+/* Stop animations Nav Bar during window resizing/Loading */
+.resize-animation-stopper * {
+  transition: none !important;
+  animation: none !important;
+}

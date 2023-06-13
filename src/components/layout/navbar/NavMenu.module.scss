@@ -45,3 +45,14 @@
 .menu__item:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
+
+@include mq('custom700') {
+  .menu {
+    position: relative;
+    opacity: 1;
+
+    flex-direction: row;
+    font-size: 1.25rem;
+    width: 100%;
+  }
+}

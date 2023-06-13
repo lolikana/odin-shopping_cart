@@ -18,3 +18,17 @@
   @extend %display-flex;
   gap: 0.5rem;
 }
+
+@include mq('custom700') {
+  .navbar {
+    order: 2;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .buttons {
+    order: 3;
+  }
+}
