@@ -1,0 +1,44 @@
+@import '@styles/main.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.images {
+  position: relative;
+
+  &__shoes {
+    width: 300px;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    bottom: calc(-100% + 125px);
+
+    -webkit-filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.9));
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  text-align: justify;
+
+  &__title {
+    text-align: center;
+    font-weight: $__bold;
+    font-size: 2rem;
+  }
+
+  &__presentation {
+    font-weight: $__bold;
+  }
+}
+
+.btn {
+  margin: 0 auto;
+}

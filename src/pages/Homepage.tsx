@@ -1,5 +1,11 @@
+import { Presentation } from '@/components/homepage';
+
 const Homepage = () => {
-  return <div>Homepage</div>;
+  return (
+    <section>
+      <Presentation />
+    </section>
+  );
 };
 
 export default Homepage;
