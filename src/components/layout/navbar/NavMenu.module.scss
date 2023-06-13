@@ -1,6 +1,7 @@
 @import '@styles/main.scss';
 
 .menu {
+  z-index: 1000;
   @extend %flex-center;
   flex-direction: column;
   gap: 2rem;
@@ -22,7 +23,7 @@
 .menu[aria-hidden='false'] {
   width: 60vw;
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .menu__item {
@@ -33,7 +34,7 @@
 .menu__item::after {
   content: '';
   position: absolute;
-  bottom: -0.2rem;
+  bottom: -0.8rem;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   width: 110%;
