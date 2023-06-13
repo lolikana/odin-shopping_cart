@@ -10,7 +10,8 @@
 }
 
 .logo {
-  width: 140px;
+  min-width: 140px;
+  max-width: 180px;
 }
 
 .buttons,
@@ -22,6 +23,7 @@
 @include mq('custom700') {
   .navbar {
     order: 2;
+    width: 100%;
   }
 
   .logo {
