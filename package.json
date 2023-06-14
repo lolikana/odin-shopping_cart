@@ -30,9 +30,11 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.0",
     "react-router-dom": "^6.12.1"
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -54,6 +56,7 @@
     "jsdom": "^22.1.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "redux": "^4.2.1",
     "sass": "^1.63.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",

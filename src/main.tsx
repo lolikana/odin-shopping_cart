@@ -1,9 +1,12 @@
 import '@styles/main.scss';
 
 import ShopPages from '@pages/Shop.tsx';
+import { store } from '@store/store.ts';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Store } from 'redux';
 
 import App from './App.tsx';
 
@@ -14,6 +17,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store as Store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
