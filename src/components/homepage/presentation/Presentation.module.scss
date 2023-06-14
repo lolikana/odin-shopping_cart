@@ -1,6 +1,7 @@
 @import '@styles/main.scss';
 
 .container {
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -8,6 +9,11 @@
 
 .images {
   position: relative;
+  flex: 1;
+  &__mountains {
+    max-height: 45vh;
+    object-fit: cover;
+  }
 
   &__shoes {
     width: 300px;
@@ -24,9 +30,13 @@
 .text {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  flex: 1;
+
   gap: 2rem;
   padding: 0 2rem;
   text-align: justify;
+  max-width: 600px;
 
   &__title {
     text-align: center;
@@ -40,5 +50,5 @@
 }
 
 .btn {
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }

@@ -1,8 +1,10 @@
 import { Presentation } from '@/components/homepage';
 
+import styles from './Homepage.module.scss';
+
 const Homepage = () => {
   return (
-    <section>
+    <section className={styles.section}>
       <Presentation />
     </section>
   );
