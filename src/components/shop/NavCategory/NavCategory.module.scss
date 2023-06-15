@@ -1,0 +1,23 @@
+@import '@/styles/main.scss';
+
+.menu {
+  justify-content: flex-start;
+}
+
+.menu__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-btn {
+  margin-top: 10px;
+  width: 30px;
+}
+
+@include mq('custom700') {
+  .menu__title[aria-hidden='true'],
+  .category-btn {
+    display: none;
+  }
+}
