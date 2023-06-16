@@ -1,4 +1,4 @@
-import { productQtySelector } from '@store/features/cartSlice';
+import { totalCartItemSelector } from '@store/features/cartSlice';
 import { useAppSelector } from '@store/store';
 
 import SearchIcon from '@/assets/icons/search_FILL0_wght400_GRAD0_opsz48.png';
@@ -10,6 +10,7 @@ import Navbar from '../navbar/Navbar';
 import styles from './Header.module.scss';
 
 const Header = () => {
+  const totalItems = useAppSelector(totalCartItemSelector);
   return (
     <header data-testid="header-component" className={styles.header}>
       <nav className={styles.navbar}>
@@ -33,7 +34,9 @@ const Header = () => {
               src={CartIcon}
               alt="Cart"
             />
-            <span className={styles.cart__icon_qty}>12</span>
+            {totalItems !== 0 && (
+              <span className={styles.cart__icon_qty}>{totalItems}</span>
+            )}
           </li>
         </ul>
       </div>
