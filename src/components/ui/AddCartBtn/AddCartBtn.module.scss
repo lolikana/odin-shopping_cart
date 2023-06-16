@@ -1,0 +1,13 @@
+@import '@styles/base.scss';
+
+.container {
+  margin-top: 0.5rem;
+}
+
+.btn {
+  color: $__sub;
+  font-weight: $__bold;
+  background-color: $__primary;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}

@@ -1,5 +1,7 @@
 import { IProduct } from 'utils/types';
 
+import AddCartBtn from '@/components/ui/AddCartBtn/AddCartBtn';
+
 import styles from './CardItem.module.scss';
 
 type Props = {
@@ -32,6 +34,7 @@ const CardItem = (props: Props) => {
           </span>
         </div>
       </div>
+      <AddCartBtn product={props.item} />
     </li>
   );
 };

@@ -1,0 +1,53 @@
+@import '@styles/base.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+
+  color: $__sub;
+  font-weight: $__bold;
+  border: 1px solid $__main;
+  border-radius: 11px;
+
+  .btn,
+  .qty {
+    padding: 0.2rem 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+}
+
+.btn {
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &-decrease,
+  &-delete {
+    border-radius: 10px 0 0 10px;
+    background-color: $__error;
+  }
+  &-increase {
+    background-color: $__tertiary;
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.btn-delete {
+  display: flex;
+  justify-content: center;
+  &-img {
+    width: 1.2rem;
+  }
+}
+
+.qty {
+  color: $__main;
+  background-color: $__grey200;
+}
