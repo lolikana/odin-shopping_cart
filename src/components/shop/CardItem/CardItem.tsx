@@ -9,12 +9,18 @@ type Props = {
 };
 
 const CardItem = (props: Props) => {
-  const { category, name, price, technology, imagePath } = props.item;
+  const { category, name, price, technology, stock, imagePath } = props.item;
 
   return (
     <li className={styles.card}>
       <div className={styles.card__image}>
         <img src={imagePath} />
+        {stock <= 5 && stock > 0 ? (
+          <p className={styles.card__leftover}>Only {stock} left!</p>
+        ) : (
+          ''
+        )}
+        {stock === 0 ? <p className={styles.card__soldout}>SOLD OUT</p> : ''}
       </div>
       <div className={styles.card__text}>
         <h2 className={styles.card__text_title}>

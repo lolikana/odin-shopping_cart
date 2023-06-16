@@ -23,9 +23,15 @@
 
 .btn {
   opacity: 0.7;
+  height: 100%;
 
   &:hover {
     opacity: 0.9;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgb(146, 145, 145);
   }
 
   &-decrease,
@@ -43,7 +49,7 @@
   display: flex;
   justify-content: center;
   &-img {
-    width: 1.2rem;
+    width: calc(1rem + 2px);
   }
 }
 

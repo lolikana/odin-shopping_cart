@@ -8,6 +8,25 @@
   display: flex;
   flex-direction: column;
 
+  &__image {
+    position: relative;
+  }
+
+  &__leftover,
+  &__soldout {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $__error;
+    font-weight: $__bold;
+    bottom: 10%;
+    left: 50%;
+  }
+
+  &__soldout {
+    background-color: rgba(215, 215, 215, 0.8);
+    padding: 0.2rem 0.5rem;
+  }
+
   &__text {
     flex-grow: 1;
     display: flex;

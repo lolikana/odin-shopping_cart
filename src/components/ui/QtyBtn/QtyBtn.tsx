@@ -6,6 +6,7 @@ type Props = {
   onIncrease: () => void;
   onDecrease: () => void;
   qty: number;
+  stock: number;
 };
 
 const QtyBtn = (props: Props) => {
@@ -29,6 +30,7 @@ const QtyBtn = (props: Props) => {
       <button
         className={[styles.btn, styles['btn-increase']].join(' ')}
         onClick={props.onIncrease}
+        disabled={props.stock === props.qty}
       >
         +
       </button>

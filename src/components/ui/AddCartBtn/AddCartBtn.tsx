@@ -14,7 +14,11 @@ const AddCartBtn = (props: { product: IProduct }) => {
   let content: JSX.Element = <p>SoldOut</p>;
   if (!qty) {
     content = (
-      <button className={styles.btn} onClick={() => dispatch(increment(product))}>
+      <button
+        className={styles.btn}
+        onClick={() => dispatch(increment(product))}
+        disabled={product.stock === 0}
+      >
         Add To Cart
       </button>
     );
@@ -25,6 +29,7 @@ const AddCartBtn = (props: { product: IProduct }) => {
         onIncrease={() => dispatch(increment(product))}
         onDecrease={() => dispatch(decrement(product))}
         qty={qty}
+        stock={product.stock}
       />
     );
   }

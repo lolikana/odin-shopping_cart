@@ -8,6 +8,7 @@ export interface IProduct {
   category: IProductCat['type'];
   name: string;
   technology?: 'gore-tex';
+  stock: number;
   price: number;
   imagePath: string;
 }
