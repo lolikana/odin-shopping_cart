@@ -5,7 +5,7 @@ export interface IProductCat {
 
 export interface IProduct {
   id: number;
-  category: IProductCat['id'];
+  category: IProductCat['type'];
   name: string;
   technology?: 'gore-tex';
   price: number;

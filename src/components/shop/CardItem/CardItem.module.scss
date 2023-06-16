@@ -1,0 +1,36 @@
+@import '@styles/base.scss';
+
+.card {
+  width: 40%;
+  max-width: 250px;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.25rem;
+
+    &_title {
+      font-weight: $__bold;
+    }
+
+    &_bottom {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  &__tag {
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: navy;
+    padding: 0.15rem 0.25rem;
+    border-radius: 5px;
+  }
+}
