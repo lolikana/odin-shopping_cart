@@ -15,8 +15,6 @@ const NavCategory = ({ categories }: { categories: IProductCat[] }) => {
   };
 
   const handleOutsideClick = (event: MouseEvent) => {
-    console.log(event.target);
-
     if (navRef.current && !navRef.current.contains(event.target as Node)) {
       setIsHidden(true);
     }
