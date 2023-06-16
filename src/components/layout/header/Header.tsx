@@ -1,3 +1,6 @@
+import { productQtySelector } from '@store/features/cartSlice';
+import { useAppSelector } from '@store/store';
+
 import SearchIcon from '@/assets/icons/search_FILL0_wght400_GRAD0_opsz48.png';
 import CartIcon from '@/assets/icons/shopping_bag_FILL0_wght400_GRAD0_opsz48.png';
 import SalomonLogo from '@/assets/logo/logo-salomon-2022-black.svg';
@@ -30,6 +33,7 @@ const Header = () => {
               src={CartIcon}
               alt="Cart"
             />
+            <span className={styles.cart__icon_qty}>12</span>
           </li>
         </ul>
       </div>
