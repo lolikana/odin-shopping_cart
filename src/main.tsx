@@ -9,10 +9,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Store } from 'redux';
 
 import App from './App.tsx';
+import CartPage from './pages/Cart.tsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
-  { path: '/shop', element: <ShopPages /> }
+  { path: '/shop', element: <ShopPages /> },
+  { path: '/cart', element: <CartPage /> }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

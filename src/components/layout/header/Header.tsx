@@ -1,5 +1,6 @@
 import { totalCartItemSelector } from '@store/features/cartSlice';
 import { useAppSelector } from '@store/store';
+import { useNavigate } from 'react-router-dom';
 
 import SearchIcon from '@/assets/icons/search_FILL0_wght400_GRAD0_opsz48.png';
 import CartIcon from '@/assets/icons/shopping_bag_FILL0_wght400_GRAD0_opsz48.png';
@@ -10,6 +11,7 @@ import Navbar from '../navbar/Navbar';
 import styles from './Header.module.scss';
 
 const Header = () => {
+  const navigate = useNavigate();
   const totalItems = useAppSelector(totalCartItemSelector);
   return (
     <header data-testid="header-component" className={styles.header}>
@@ -29,11 +31,7 @@ const Header = () => {
             />
           </li>
           <li className={styles.icons__item}>
-            <IconHeaderBtn
-              onClick={() => console.log('Cart')}
-              src={CartIcon}
-              alt="Cart"
-            />
+            <IconHeaderBtn onClick={() => navigate('/cart')} src={CartIcon} alt="Cart" />
             {totalItems !== 0 && (
               <span className={styles.cart__icon_qty}>{totalItems}</span>
             )}
