@@ -29,8 +29,17 @@
   &__tag {
     font-size: 0.8rem;
     color: #fff;
-    background-color: navy;
     padding: 0.15rem 0.25rem;
     border-radius: 5px;
+
+    &.hiking {
+      background-color: navy;
+    }
+    &.running {
+      background-color: red;
+    }
+    &.trail {
+      background-color: green;
+    }
   }
 }

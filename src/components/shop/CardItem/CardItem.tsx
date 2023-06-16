@@ -28,7 +28,7 @@ const CardItem = (props: Props) => {
         <div className={styles.card__text_bottom}>
           <p>${price} </p>
           <span className={[styles['card__tag'], styles[`${category}`]].join(' ')}>
-            {category}
+            <strong>{category}</strong>
           </span>
         </div>
       </div>
