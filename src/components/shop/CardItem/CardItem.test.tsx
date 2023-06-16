@@ -1,21 +1,33 @@
 import '@testing-library/jest-dom'; // Import the jest-dom matchers
 
-import { render, screen } from '@testing-library/react';
+import renderWithRouter from '@__tests__/renderWithRouter';
+import { store } from '@store/store.ts';
+import { screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { IProduct } from 'utils/types';
 
 import CardItem from './CardItem';
 
+const mockItem = {
+  id: 1,
+  category: 'hiking',
+  name: 'Shoes',
+  price: 499.99,
+  stock: 5,
+  technology: 'gore-tex' as const,
+  imagePath: '/path/to/image.jpg'
+};
+
 describe('CardItem component', () => {
-  const mockItem = {
-    id: 1,
-    category: 'hiking',
-    name: 'Shoes',
-    price: 499.99,
-    technology: 'gore-tex' as const,
-    imagePath: '/path/to/image.jpg'
-  };
+  const renderCardItem = (product: IProduct) =>
+    renderWithRouter(
+      <Provider store={store}>
+        <CardItem item={product} />
+      </Provider>
+    );
 
   it('should render the card item with correct details', () => {
-    render(<CardItem item={mockItem} />);
+    renderCardItem(mockItem);
 
     const image = screen.getByRole('img');
     const title = screen.getByText(/SHOES/i);
@@ -29,5 +41,11 @@ describe('CardItem component', () => {
     expect(technology).toBeInTheDocument();
     expect(price).toBeInTheDocument();
     expect(category).toBeInTheDocument();
+  });
+
+  test('renders SOLD OUT when product stock is 0', () => {
+    renderCardItem({ ...mockItem, stock: 0 });
+    const soldOutText = screen.getByText(/SOLD OUT/i);
+    expect(soldOutText).toBeInTheDocument();
   });
 });

@@ -1,5 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import renderWithRouter from '@__tests__/renderWithRouter';
+import { store } from '@store/store';
+import { screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import { describe, it } from 'vitest';
 
 import App from './App';
@@ -7,10 +9,10 @@ import App from './App';
 describe('App.tsx', () => {
   describe('Header.tsx', () => {
     it('renders the Header component', () => {
-      render(
-        <MemoryRouter>
+      renderWithRouter(
+        <Provider store={store}>
           <App />
-        </MemoryRouter>
+        </Provider>
       );
       const headerElement = screen.getByTestId('header-component');
 
@@ -18,10 +20,10 @@ describe('App.tsx', () => {
     });
 
     it('should renders Header with the correct image source', () => {
-      render(
-        <MemoryRouter>
+      renderWithRouter(
+        <Provider store={store}>
           <App />
-        </MemoryRouter>
+        </Provider>
       );
       const image: HTMLImageElement = screen.getByAltText(/Salomon logo/i);
       const expectedSrcRegex = '/src/assets/logo/logo-salomon-2022-black.svg';

@@ -13,6 +13,7 @@ const QtyBtn = (props: Props) => {
   return (
     <div className={styles.container}>
       <button
+        data-testid="decrease-btn"
         className={[styles.btn, styles['btn-decrease']].join(' ')}
         onClick={props.onDecrease}
       >
@@ -28,6 +29,7 @@ const QtyBtn = (props: Props) => {
       </button>
       <p className={styles.qty}>{props.qty}</p>
       <button
+        data-testid="increase-btn"
         className={[styles.btn, styles['btn-increase']].join(' ')}
         onClick={props.onIncrease}
         disabled={props.stock === props.qty}
