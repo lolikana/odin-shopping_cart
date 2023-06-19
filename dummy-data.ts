@@ -14,8 +14,7 @@ export const DUMMY_SHOES: IProduct[] = [
     technology: 'gore-tex',
     price: 80,
     stock: 3,
-    imagePath:
-      './src/assets/shop/shoes/hiking/L41289600_0_GHO_X_ULTRA_4_GTX_W_Black-StoWea-Op.webp'
+    imagePath: '/shop/shoes/hiking/L41289600_0_GHO_X_ULTRA_4_GTX_W_Black-StoWea-Op.webp'
   },
   {
     id: 2,
@@ -24,8 +23,7 @@ export const DUMMY_SHOES: IProduct[] = [
     technology: 'gore-tex',
     stock: 5,
     price: 100,
-    imagePath:
-      './src/assets/shop/shoes/hiking/L41295600_8dee45ca3f1391e2bf6e96f841965c26.webp'
+    imagePath: '/shop/shoes/hiking/L41295600_8dee45ca3f1391e2bf6e96f841965c26.webp'
   },
   {
     id: 3,
@@ -35,7 +33,7 @@ export const DUMMY_SHOES: IProduct[] = [
     price: 120,
     stock: 0,
     imagePath:
-      './src/assets/shop/shoes/hiking/L41387000_0_GHO_QUEST_4_GTX_W_Slate_Trooper_Opal_Blue.webp'
+      '/shop/shoes/hiking/L41387000_0_GHO_QUEST_4_GTX_W_Slate_Trooper_Opal_Blue.webp'
   },
   {
     id: 4,
@@ -43,8 +41,7 @@ export const DUMMY_SHOES: IProduct[] = [
     name: 'spectur',
     price: 80,
     stock: 10,
-    imagePath:
-      './src/assets/shop/shoes/running/L41589300_0_GHO_SPECTUR_W_Ebony_Almond_Cream_Le.webp'
+    imagePath: '/shop/shoes/running/L41589300_0_GHO_SPECTUR_W_Ebony_Almond_Cream_Le.webp'
   },
   {
     id: 5,
@@ -52,8 +49,7 @@ export const DUMMY_SHOES: IProduct[] = [
     name: 's/lb phantasm cf',
     price: 85,
     stock: 9,
-    imagePath:
-      './src/assets/shop/shoes/running/L41557900_0_GHO_S_LAB_PHANTASM_CF_Racing_Racing.webp'
+    imagePath: '/shop/shoes/running/L41557900_0_GHO_S_LAB_PHANTASM_CF_Racing_Racing.webp'
   },
   {
     id: 6,
@@ -61,8 +57,7 @@ export const DUMMY_SHOES: IProduct[] = [
     name: 'glide max sale',
     price: 70,
     stock: 0,
-    imagePath:
-      './src/assets/shop/shoes/running/L41768900_0_GHO_GLIDE_MAX_W_Wht_Almond_Cream_Te.webp'
+    imagePath: '/shop/shoes/running/L41768900_0_GHO_GLIDE_MAX_W_Wht_Almond_Cream_Te.webp'
   },
   {
     id: 7,
@@ -71,7 +66,7 @@ export const DUMMY_SHOES: IProduct[] = [
     price: 90,
     stock: 19,
     imagePath:
-      './src/assets/shop/shoes/trail/L47170900_0_GHO_S_LAB_PULSAR_2_SGQuiet_Shade_Magnet_Black.webp'
+      '/shop/shoes/trail/L47170900_0_GHO_S_LAB_PULSAR_2_SGQuiet_Shade_Magnet_Black.webp'
   },
   {
     id: 8,
@@ -80,6 +75,6 @@ export const DUMMY_SHOES: IProduct[] = [
     price: 90,
     stock: 1,
     imagePath:
-      './src/assets/shop/shoes/trail/L47220100_0_GHO_S_LAB_PULSAR_2Fiery_Red_Fiery_Red_White.webp'
+      '/shop/shoes/trail/L47220100_0_GHO_S_LAB_PULSAR_2Fiery_Red_Fiery_Red_White.webp'
   }
 ];

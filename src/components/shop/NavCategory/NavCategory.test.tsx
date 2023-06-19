@@ -2,7 +2,6 @@ import renderWithRouter from '@__tests__/renderWithRouter';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { IProductCat } from 'utils/types';
-import { vi } from 'vitest';
 
 import NavCategory from './NavCategory';
 
