@@ -1,0 +1,15 @@
+@import '@styles/base.scss';
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  margin: 0 2rem 2rem;
+}
+
+.total {
+  font-size: 1.5rem;
+  font-weight: $__bold;
+}

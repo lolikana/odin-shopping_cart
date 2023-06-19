@@ -30,8 +30,8 @@ const Header = () => {
               alt="Search"
             />
           </li>
-          <li className={styles.icons__item}>
-            <IconHeaderBtn onClick={() => navigate('/cart')} src={CartIcon} alt="Cart" />
+          <li className={styles.icons__item} onClick={() => navigate('/cart')}>
+            <IconHeaderBtn src={CartIcon} alt="Cart" />
             {totalItems !== 0 && (
               <span className={styles.cart__icon_qty}>{totalItems}</span>
             )}

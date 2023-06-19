@@ -1,0 +1,28 @@
+@import '@styles/base.scss';
+
+.item {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  max-width: 225px;
+  margin-right: 1rem;
+}
+
+.price {
+  width: 225px;
+  align-self: flex-end;
+  &__total {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    span {
+      margin-top: 0.5rem;
+      font-weight: $__bold;
+    }
+  }
+}

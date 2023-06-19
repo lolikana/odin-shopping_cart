@@ -5,7 +5,7 @@ import styles from './IconHeaderBtn.module.scss';
 type Props = {
   src: string;
   alt: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 const IconHeaderBtn: FC<Props> = props => {
