@@ -30,6 +30,7 @@ The project uses the following technologies:
 - [x] User can adjust the quantity of items in the cart using increment and decrement buttons or by manually typing the quantity.
 - [ ] User can proceed to checkout and pay (Note: The payment logic is not implemented in this project).
 - [x] User can test the app thoroughly using Vitest for unit testing.
+- [x] User can filter products by category
 
 ## Getting Started
 
