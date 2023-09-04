@@ -1,5 +1,5 @@
 export interface IProductCat {
-  id: 'hiking123' | 'running123' | 'trail123';
+  id: 'hiking123' | 'running123' | 'trail123' | 'all123';
   type: string;
 }
 

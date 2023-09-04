@@ -1,6 +1,7 @@
 import { IProduct, IProductCat } from 'utils/types';
 
 export const DUMMY_SHOES_CAT: IProductCat[] = [
+  { id: 'all123', type: 'all' },
   { id: 'hiking123', type: 'hiking' },
   { id: 'running123', type: 'running' },
   { id: 'trail123', type: 'trail' }

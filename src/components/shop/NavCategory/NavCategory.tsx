@@ -1,12 +1,18 @@
 import classes from '@components/layout/navbar/NavMenu.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { IProductCat } from 'utils/types';
 
 import ReturnIcon from '@/assets/icons/keyboard_return_FILL0_wght400_GRAD0_opsz48.svg';
 
 import styles from './NavCategory.module.scss';
 
-const NavCategory = ({ categories }: { categories: IProductCat[] }) => {
+const NavCategory = ({
+  categories,
+  setCategory
+}: {
+  categories: IProductCat[];
+  setCategory: Dispatch<SetStateAction<IProductCat['type']>>;
+}) => {
   const [isHidden, setIsHidden] = useState(true);
   const navRef = useRef<HTMLElement>(null);
 
@@ -18,6 +24,10 @@ const NavCategory = ({ categories }: { categories: IProductCat[] }) => {
     if (navRef.current && !navRef.current.contains(event.target as Node)) {
       setIsHidden(true);
     }
+  };
+
+  const setFilter = (cat: IProductCat) => {
+    setCategory(cat.type);
   };
 
   useEffect(() => {
@@ -51,7 +61,9 @@ const NavCategory = ({ categories }: { categories: IProductCat[] }) => {
         </li>
         {categories.map(cat => (
           <li key={cat.id} className={classes.menu__item}>
-            <button data-testid="navigation-category">{cat.type}</button>
+            <button data-testid="navigation-category" onClick={() => setFilter(cat)}>
+              {cat.type}
+            </button>
           </li>
         ))}
       </ul>
